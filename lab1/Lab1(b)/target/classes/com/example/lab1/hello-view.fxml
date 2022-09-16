@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Slider fx:id="slider" showTickLabels="true" />
+   <HBox prefWidth="200.0">
+      <children>
+         <Button fx:id="start1Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Start 1" />
+         <Separator maxWidth="1.7976931348623157E308" opacity="0.0" prefHeight="6.0" prefWidth="55.0" />
+         <Button fx:id="start2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Start 2" />
+      </children>
+   </HBox>
+   <HBox prefWidth="200.0">
+      <children>
+         <Button fx:id="stop1Button" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Stop 1" />
+         <Separator opacity="0.0" prefHeight="6.0" prefWidth="55.0" />
+         <Button fx:id="stop2Button" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Stop 2" />
+      </children>
+   </HBox>
+</VBox>
