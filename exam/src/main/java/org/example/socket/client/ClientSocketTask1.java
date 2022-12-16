@@ -23,6 +23,7 @@ public class ClientSocketTask1 {
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
                 Queue<String> commandsQueue = new LinkedList<>();
                 commandsQueue.offer("getFacultyYearStudents");
+                commandsQueue.offer("getFacultyStudents FKNK");
                 commandsQueue.offer("stop");
                 while (!commandsQueue.isEmpty()) {
                     String message = commandsQueue.poll();

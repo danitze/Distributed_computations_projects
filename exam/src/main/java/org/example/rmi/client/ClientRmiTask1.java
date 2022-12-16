@@ -12,7 +12,17 @@ public class ClientRmiTask1 {
     public static void main(String[] args) throws RemoteException, NotBoundException {
         final Registry registry = LocateRegistry.getRegistry(2732);
         Manager manager = (Manager) registry.lookup(UNIQUE_BINDING_NAME);
-        System.out.println(manager.getStudentsByGroup("IPS-31"));
+        new Thread(() -> {
+            try {
+                System.out.println(manager.getStudentsByGroup("IPS-31"));
+            } catch (RemoteException e) {}
+        }).start();
+
+        new Thread(() -> {
+            try {
+                System.out.println(manager.getStudentsBornAfterYear(2003));
+            } catch (RemoteException e) {}
+        }).start();
     }
 
 }
